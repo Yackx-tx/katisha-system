@@ -37,12 +37,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// You can now use the `$conn` object to interact with the 
+// You can now use the `$conn` object to interact with the
 
 if (isset($_POST['submit'])) {
     $ticket = $_POST['num'];
-    $busname = $_POST['bus']; 
-   
+    $busname = $_POST['bus'];
+
 // Fetch the current number of customers for the selected bus
 $sql = "SELECT num_customers FROM buses WHERE bus_p='" . $busname . "'";
 $result = $conn->query($sql);
@@ -69,6 +69,6 @@ if ($conn->query($sql) === TRUE) {
 
 
 ?>
-    
+
 </body>
 </html>
